@@ -28,55 +28,55 @@ const RoomTypeSelector = ({ handleRoomInputChange, newRoom }) => {
 
   return (
     <>
-      {roomTypes.length > 0 && (
-        <div>
-          <select
-            required
-            className="form-select"
-            name="roomType"
-            onChange={(e) => {
-              if (e.target.value === "Add New") {
-                setShowNewRoomTypeInput(true);
-              } else {
-                handleRoomInputChange(e);
-              }
-            }}
-            // eslint-disable-next-line react/prop-types
-            value={newRoom.roomType}
-          >
-            <option value="">Select a room type</option>
+      {/* {roomTypes.length > 0 && ( */}
+      <div>
+        <select
+          required
+          className="form-select"
+          name="roomType"
+          onChange={(e) => {
+            if (e.target.value === "Add New") {
+              setShowNewRoomTypeInput(true);
+            } else {
+              handleRoomInputChange(e);
+            }
+          }}
+          // eslint-disable-next-line react/prop-types
+          value={newRoom.roomType}
+        >
+          <option value="">Select a room type</option>
 
-            {roomTypes.map((type, index) => (
-              <option key={index} value={type}>
-                {type}
-              </option>
-            ))}
-            <option className="bg-info text-white " value={"Add New"}>
-              Add New
+          {roomTypes.map((type, index) => (
+            <option key={index} value={type}>
+              {type}
             </option>
-          </select>
-          {showNewRoomTypeInput && (
-            <div className="mt-2">
-              <div className="input-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Enter New Room Type"
-                  value={newRoomType}
-                  onChange={handleNewRoomTypeInputChange}
-                />
-                <button
-                  className="btn btn-hotel"
-                  type="button"
-                  onClick={handleAddNewRoomType}
-                >
-                  Add
-                </button>
-              </div>
+          ))}
+          <option className="bg-info text-white " value={"Add New"}>
+            Add New
+          </option>
+        </select>
+        {showNewRoomTypeInput && (
+          <div className="mt-2">
+            <div className="input-group">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Enter New Room Type"
+                value={newRoomType}
+                onChange={handleNewRoomTypeInputChange}
+              />
+              <button
+                className="btn btn-hotel"
+                type="button"
+                onClick={handleAddNewRoomType}
+              >
+                Add
+              </button>
             </div>
-          )}
-        </div>
-      )}
+          </div>
+        )}
+      </div>
+      {/* )} */}
     </>
   );
 };

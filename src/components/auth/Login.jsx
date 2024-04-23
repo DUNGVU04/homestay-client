@@ -7,8 +7,8 @@ import { useAuth } from "./AuthProvider";
 const Login = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [login, setLogin] = useState({
-    email: "",
-    password: "",
+    email: "adung0477@gmail.com",
+    password: "240402",
   });
 
   const navigate = useNavigate();

@@ -32,7 +32,9 @@ const BookingSummary = ({ booking, payment, isFormValid, onConfirm }) => {
     <div className="row">
       <div className="col-md-6"></div>
       <div className="card card-body mt-5">
-        <h4 className="card-title hotel-color">Reservation Summary</h4>
+        <h4 className="card-title hotel-color-service-bookings">
+          Reservation Summary
+        </h4>
         <p>
           Name: <strong>{booking.guestFullName}</strong>
         </p>
@@ -52,7 +54,7 @@ const BookingSummary = ({ booking, payment, isFormValid, onConfirm }) => {
         </p>
 
         <div>
-          <h5 className="hotel-color">Number of Guest</h5>
+          <h5 className="hotel-color-service-bookings">Number of Guest</h5>
           <strong>
             Adult{booking.numOfAdults > 1 ? "s" : ""} : {booking.numOfAdults}
           </strong>

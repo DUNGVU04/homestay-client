@@ -73,14 +73,13 @@ const BookingForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const form = e.currentTarget; // Khi sự kiện onSubmit của form được kích hoạt, đối tượng event (e) chứa thông tin về sự kiện đó
+    const form = e.currentTarget;
     if (
       form.checkValidity() === false ||
       !isGuestCountValid() ||
       !isCheckOutDateValid()
     ) {
-      // hàm checkValidity() được gọi để kiểm tra xem các trường trong form có hợp lệ hay không. Nếu form không hợp lệ hoặc một trong các điều kiện isGuestCountValid() hoặc isCheckOutDateValid() trả về false, điều kiện này sẽ được thỏa mãn.
-      e.stopPropagation(); //  Nếu form không hợp lệ hoặc một trong các điều kiện isGuestCountValid() hoặc isCheckOutDateValid() trả về false, hàm này sẽ ngăn chặn sự lan truyền của sự kiện
+      e.stopPropagation();
     } else {
       setIsSubmitted(true);
     }
@@ -107,7 +106,10 @@ const BookingForm = () => {
               <h4 className="card-title">Reserve Room</h4>
               <Form noValidate validated={validated} onSubmit={handleSubmit}>
                 <Form.Group>
-                  <Form.Label htmlFor="guestFullName" className="hotel-color">
+                  <Form.Label
+                    htmlFor="guestFullName"
+                    className="hotel-color-service-bookings"
+                  >
                     Fullname
                   </Form.Label>
                   <FormControl
@@ -125,7 +127,10 @@ const BookingForm = () => {
                 </Form.Group>
 
                 <Form.Group>
-                  <Form.Label htmlFor="guestEmail" className="hotel-color">
+                  <Form.Label
+                    htmlFor="guestEmail"
+                    className="hotel-color-service-bookings"
+                  >
                     Email
                   </Form.Label>
                   <FormControl
@@ -145,7 +150,10 @@ const BookingForm = () => {
                   <legend>Lodging Period</legend>
                   <div className="row">
                     <div className="col-6">
-                      <Form.Label htmlFor="checkInDate" className="hotel-color">
+                      <Form.Label
+                        htmlFor="checkInDate"
+                        className="hotel-color-service-bookings"
+                      >
                         Check-in date
                       </Form.Label>
                       <FormControl
@@ -166,7 +174,7 @@ const BookingForm = () => {
                     <div className="col-6">
                       <Form.Label
                         htmlFor="checkOutDate"
-                        className="hotel-color"
+                        className="hotel-color-service-bookings"
                       >
                         Check-out date
                       </Form.Label>
@@ -196,7 +204,10 @@ const BookingForm = () => {
                   <legend>Number of Guest</legend>
                   <div className="row">
                     <div className="col-6">
-                      <Form.Label htmlFor="numOfAdults" className="hotel-color">
+                      <Form.Label
+                        htmlFor="numOfAdults"
+                        className="hotel-color-service-bookings"
+                      >
                         Adults
                       </Form.Label>
                       <FormControl
@@ -216,7 +227,7 @@ const BookingForm = () => {
                     <div className="col-6">
                       <Form.Label
                         htmlFor="numOfChildren"
-                        className="hotel-color"
+                        className="hotel-color-service-bookings"
                       >
                         Children
                       </Form.Label>

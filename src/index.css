@@ -78,6 +78,12 @@ body {
   font-size: 1.5rem;
   text-transform: uppercase;
 }
+.hotel-color-service-bookings {
+  color: rgb(169, 77, 123);
+  font-family: "Trirong", serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
 .room-carousel {
   text-transform: uppercase;
   font-family: "Trirong", serif;

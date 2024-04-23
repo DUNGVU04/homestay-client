@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { registerUser } from "../utils/ApiFuntions";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Registration = () => {
+  const navigate = useNavigate();
   const [registration, setRegistration] = useState({
     firstName: "",
     lastName: "",

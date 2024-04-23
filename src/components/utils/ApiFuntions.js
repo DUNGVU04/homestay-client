@@ -3,7 +3,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "https://homestay777.mine.bz/api/",
+  baseURL: "http://localhost:8080",
 });
 
 export const getHeader = () => {
@@ -11,6 +11,7 @@ export const getHeader = () => {
   return {
     Authorization: `Bearer ${token}`,
     "Content-Type": "application/json",
+    "Content-Type": "multipart/form-data",
   };
 };
 
